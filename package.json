@@ -1,0 +1,21 @@
+{
+  "name": "zbets",
+  "version": "1.0.0",
+  "description": "projeto para colaboradores da zellar apostarem",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc index.ts && node index.js"
+  },
+  "author": "enzo tiezzi",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mongoose": "5.10.1",
+    "@types/node": "^14.14.20",
+    "typescript": "^4.1.3",
+    "mongoose": "5.10.1"
+  },
+  "devDependencies": {
+    "@types/mongoose": "5.10.1",
+    "@types/node": "^14.14.20"
+  }
+}
