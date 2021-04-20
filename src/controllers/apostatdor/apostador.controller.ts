@@ -18,7 +18,7 @@ export class ApostadorController implements IApostadorController {
         if (apostador != undefined) {
             apostador.zcoins += zcoins;
 
-            apostador.save();
+            await apostador.save();
         }
 
         return apostador?.zcoins;
@@ -30,7 +30,7 @@ export class ApostadorController implements IApostadorController {
         if (apostador != undefined) {
             apostador.zcoins -= zcoins;
 
-            apostador.save();
+            await apostador.save();
         }
 
         return apostador?.zcoins;
