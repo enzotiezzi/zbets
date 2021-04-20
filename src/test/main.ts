@@ -5,7 +5,7 @@ export class MainTest {
     private apostadorController: IApostadorController = new ApostadorController(); 
 
     async run(): Promise<void> {
-        const apostador = await this.apostadorController?.adicionarApostador("enzo teste");
+        const apostador = await this.apostadorController?.adicionarApostador("enzo teste", "14");
 
         console.log("Nome do apostador: ", apostador?.nome);
         console.log("Quantidade de zcoins: ", apostador?.zcoins);

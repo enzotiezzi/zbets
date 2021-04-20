@@ -2,8 +2,9 @@ import Apostador, { IApostador } from "../../models/apostador";
 import { IApostadorController } from "./iapostador.controller";
 
 export class ApostadorController implements IApostadorController {
-    async adicionarApostador(nome: string): Promise<IApostador> {
+    async adicionarApostador(nome: string, idDiscord: string): Promise<IApostador> {
         const apostador = await Apostador.create({
+            idDiscord: idDiscord,
             nome: nome,
             zcoins: 500,
             dataCriacao: new Date().toISOString(),
