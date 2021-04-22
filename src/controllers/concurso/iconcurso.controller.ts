@@ -7,4 +7,5 @@ export interface IConcursoController {
     buscarConcursoAtivoPorNome(nome: string): Promise<IConcurso | null>;
     definirResultadoDoConcurso(id: string, idConcursoItem: string): Promise<void>;
     listarConcursosAtivos(): Promise<IConcurso[]>;
+    listarConcursosInativos(): Promise<IConcurso[]>;
 }

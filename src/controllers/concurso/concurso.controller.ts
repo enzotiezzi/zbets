@@ -42,4 +42,10 @@ export class ConcursoController implements IConcursoController {
 
         return concursos;
     }
+
+    async listarConcursosInativos(): Promise<IConcurso[]> {
+        const concursos = await Concurso.find({ativo: false});
+
+        return concursos;
+    }
 }
