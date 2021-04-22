@@ -16,7 +16,7 @@ export class ApostadorController implements IApostadorController {
     async adicionarZcoins(id: string, zcoins: number): Promise<number | undefined> {
         const apostador = await Apostador.findById(id);
 
-        if (apostador != undefined) {
+        if (apostador != null) {
             apostador.zcoins += zcoins;
 
             await apostador.save();
