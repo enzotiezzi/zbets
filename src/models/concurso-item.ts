@@ -10,6 +10,10 @@ const ConcursoItemSchema = new Schema({
     nome: {
         type: String,
         required: true
+    },
+    concurso: {
+        type: Schema.Types.ObjectId,
+        ref: "Concurso" 
     }
 });
 
