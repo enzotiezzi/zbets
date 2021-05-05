@@ -28,23 +28,23 @@ export class ConcursoController implements IConcursoController {
     }
 
     async buscarConcursoAtivoPorNome(nome: string): Promise<IConcurso | null> {
-        const concurso = await Concurso.findOne({nome: nome});
+        const concurso = await Concurso.findOne({ nome: nome });
 
         return concurso;
     }
 
-    definirResultadoDoConcurso(id: string, idConcursoItem: string): Promise<void> {
+    async definirResultadoDoConcurso(id: string, idConcursoItem: string): Promise<void> {
         throw new Error("Method not implemented.");
     }
 
     async listarConcursosAtivos(): Promise<IConcurso[]> {
-        const concursos = await Concurso.find({ativo: true});
+        const concursos = await Concurso.find({ ativo: true });
 
         return concursos;
     }
 
     async listarConcursosInativos(): Promise<IConcurso[]> {
-        const concursos = await Concurso.find({ativo: false});
+        const concursos = await Concurso.find({ ativo: false });
 
         return concursos;
     }

@@ -1,4 +1,4 @@
-import { Document, model, Model, Schema, SchemaTypes } from "mongoose";
+import { Document, model, Model, Schema } from "mongoose";
 import { IConcurso } from "./concurso";
 
 export interface IConcursoItem extends Document {
